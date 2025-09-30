@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# JetBrains / IntelliJ / Rider / PyCharm
+.idea/
+*.iml
