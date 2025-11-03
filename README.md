@@ -114,14 +114,15 @@ Clear, script‑friendly semantics make it easy to integrate in pipelines.
 
 ## Roadmap (incremental missions)
 
-1. **Parser (no quotes)** — split on commas, preserve empty fields.
-2. **Header lookup** — resolve column index by name.
-3. **Online stats** — Welford mean/variance; online median (two heaps).
-4. **ASCII histograms** — `hist <file> --col X --bins N`.
-5. **Quoted CSV** — RFC4180-ish quotes and `""` escapes.
-6. **Row filtering** — tiny expression language: `fare>50 && name=='Alice'`.
-7. **Group‑by** — `--by <column>` with online aggregations per group.
-8. **Parallel pipeline** — chunked reading + worker threads.
+1. **Parser (no quotes)** — split on commas, preserve empty fields. — ✅
+2. Quoted fields (embedded commas) — ✅
+3. **Header lookup** — resolve column index by name.
+4. **Online stats** — Welford mean/variance; online median (two heaps).
+5. **ASCII histograms** — `hist <file> --col X --bins N`.
+6. **Quoted CSV** — RFC4180-ish quotes and `""` escapes.
+7. **Row filtering** — tiny expression language: `fare>50 && name=='Alice'`.
+8. **Group‑by** — `--by <column>` with online aggregations per group.
+9. **Parallel pipeline** — chunked reading + worker threads.
 
 Each step will come with tests, docs, and a focused commit.
 
